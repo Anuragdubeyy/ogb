@@ -2,7 +2,7 @@ import { Search } from "lucide-react";
 import { Button } from "../../../components/ui/button";
 // import { barterAvailableColumn } from "./column";
 
-export default function BarterAvailable() {
+export default function BarterGiven() {
   return (
     <section className="border-2 rounded-3xl p-2" style={{borderColor: "rgba(195, 166, 109, 1)"}}>
       <div className="flex justify-between p-2">
@@ -35,14 +35,12 @@ export default function BarterAvailable() {
         <th className="py-2 px-4">Ornament Name</th>
         <th className="py-2 px-4">Image</th>
         <th className="py-2 px-4">Price (Rs)</th>
-        <th className="py-2 px-4">Customer Name</th>
-        <th className="py-2 px-4">Mobile</th>
         <th className="py-2 px-4">Weight(gm)</th>
         <th className="py-2 px-4">Category</th>
         <th className="py-2 px-4">Carat</th>
-        <th className="py-2 px-4">Height</th>
-        <th className="py-2 px-4">Width</th>
-        <th className="py-2 px-4">Status</th>
+        <th className="py-2 px-4">Customer Name</th>
+        <th className="py-2 px-4">Contact No.</th>
+        <th className="py-2 px-4">Date</th>
       </tr>
     </thead>
     {/* Your table body content goes here */}
