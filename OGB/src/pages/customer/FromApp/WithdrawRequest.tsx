@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function OverTheCustomer() {
+export default function WithdrawRequest () {
     return (
       <div
         className="border-2 p-3"
@@ -30,33 +30,17 @@ export default function OverTheCustomer() {
           </div>
         </div>
   
-        <div className="flex gap-20 justify-center mt-6 active:text-[#C3A66D]">
-          <Link to="/overThe-Customer"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group active   ">
-            Home
+        <div className="flex gap-36 justify-center mt-6 active:text-[#C3A66D]">
+          <Link to="/customer-form"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group active   ">
+            Deposit Request
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
-          <Link to="/deposit"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
-            Deposit
+          <h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+            Withdraw Request
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
-          </h2></Link>
+          </h2>
           <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
-            withdraw
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
-          </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
-            Barter
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
-          </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
-            Display
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
-          </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
-            Immediate Sell
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
-          </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
-            Barter List
+            Orders
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
         </div>
@@ -65,16 +49,15 @@ export default function OverTheCustomer() {
     <table className="w-full table-auto ">
       <thead>
         <tr className=" text-black" style={{backgroundColor:"#EDE6D8"}}>
-        
-        <th className="py-2 px-4">Ornament Image</th>
-          <th className="py-2 px-4">Ornament Name</th>
-          <th className="py-2 px-4">Category</th>
-          <th className="py-2 px-4">Weight</th>
+          
           <th className="py-2 px-4">Customer Name</th>
+          <th className="py-2 px-4">Address</th>
           <th className="py-2 px-4">Mobile</th>
-          <th className="py-2 px-4">Booking Date</th>
-          <th className="py-2 px-4">Days</th>
+          <th className="py-2 px-4">Date</th>
+          <th className="py-2 px-4">Time</th>
           <th className="py-2 px-4">Status</th>
+          <th className="py-2 px-4">Request Type</th>
+          <th className="py-2 px-4">Action</th>
         </tr>
       </thead>
       {/* Your table body content goes here */}

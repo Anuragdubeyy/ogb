@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function FromApp() {
   return (
     <div
@@ -33,14 +35,14 @@ export default function FromApp() {
           Deposit Request
           <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
         </h2>
-        <h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+        <Link to="/withdraw-request"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
           Withdraw Request
           <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
-        </h2>
-        <h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+        </h2></Link>
+        <Link to="/orders"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
           Orders
           <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
-        </h2>
+        </h2></Link>
       </div>
 
       <div className="border border-input rounded-2xl mt-3 bg-ornament-bg">

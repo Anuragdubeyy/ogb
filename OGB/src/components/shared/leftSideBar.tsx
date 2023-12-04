@@ -88,7 +88,7 @@ export default function LeftSideBar() {
                   From App
                 </NavLink></li>
               <li><NavLink
-                  to="/barter-history"
+                  to="/OverThe-Customer"
                   className={({ isActive }) => (isActive && activeChild === 0 ?"text-[#C3A66D]" : "text-black")}
                 >
                   Over The Customer
