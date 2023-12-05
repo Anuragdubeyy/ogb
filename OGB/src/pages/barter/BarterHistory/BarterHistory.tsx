@@ -1,5 +1,7 @@
 import { Search } from "lucide-react";
 import { Button } from "../../../components/ui/button";
+import DataTable from "../../../components/common/DataTable";
+import { barterHistoryColumn } from "./column";
 // import { barterAvailableColumn } from "./column";
 
 export default function BarterHistory() {
@@ -28,7 +30,7 @@ export default function BarterHistory() {
       </div>
 
       <div className="border border-input rounded-md mt-3 bg-ornament-bg">
-  <table className="w-full table-auto">
+  {/* <table className="w-full table-auto">
     <thead>
       <tr className=" text-black" style={{backgroundColor:"#EDE6D8"}}>
         <th className="py-2 px-4">Ornament Name</th>
@@ -44,8 +46,9 @@ export default function BarterHistory() {
         <th className="py-2 px-4">Owner Details</th>
       </tr>
     </thead>
-    {/* Your table body content goes here */}
-  </table>
+    Your table body content goes here
+  </table> */}
+  <DataTable columns={barterHistoryColumn} data={[]}/>
 </div>
 
     </section>

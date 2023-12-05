@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function LeftSideBar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -7,23 +7,22 @@ export default function LeftSideBar() {
 
   const handleDropdownClick = (index) => {
     // setActiveDropdown((prevIndex) => (prevIndex === index ? null : index));
-    
+
     if (activeDropdown === index) {
-        setActiveChild((prevChild) => (prevChild === null ? index : null));
-      } else {
-        setActiveDropdown(index);
-        setActiveChild(null);
-      }
+      setActiveChild((prevChild) => (prevChild === null ? index : null));
+    } else {
+      setActiveDropdown(index);
+      setActiveChild(null);
+    }
   };
 
   return (
     <nav
-      className=" w-64 "
+      className=" w-56 overflow-auto  z-20 fixed min-w-fit bg-white"
       style={{
-       
         fontWeight: "500",
-        border:"1px solid rgba(195, 166, 109, 1)",
-        marginTop: "-6.23rem",
+        border: "1px solid rgba(195, 166, 109, 1)",
+        // marginTop: "-6.23rem",
         borderRadius: "0rem 1.5rem 0rem 0rem",
       }}
     >
@@ -34,90 +33,157 @@ export default function LeftSideBar() {
         </div>
         <div className="flex gap-3 cursor-pointer">
           <img src="./src/assets/icon/deshboard.svg" alt="" />
-          <p><NavLink to="/dashboard">Dashboard</NavLink></p>
+          <p>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </p>
         </div>
 
         <div
-            className="flex flex-col cursor-pointer "
-            
-            onClick={() => handleDropdownClick(0)}
+          className="flex flex-col cursor-pointer "
+          onClick={() => handleDropdownClick(0)}
         >
-            <NavLink className={({ isActive }) => (isActive ? " bg-primary-gradient px-3 py-1 mr-3 rounded" : "bg-white text-black")} to="/barter-available" >
-            
-           
-          <div className="flex gap-3 ">
-          <img src="./src/assets/icon/barter.svg" alt="" />
-            <p>Barter</p>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? " bg-primary-gradient  mr-3 rounded"
+                : "bg-white text-black"
+            }
+            to="/barter-available"
+          >
+            <div className="flex gap-3 ">
+              <img src="./src/assets/icon/barter.svg" alt="" />
+              <p>Barter</p>
             </div>
-            
-          {activeDropdown === 0 && (
-            <div className="ml-5 text-sm mt-2 flex flex-col gap-2 ">
-                
-              <li>
-                <NavLink className={({ isActive }) => (isActive ? "text-[#C3A66D]" : "text-black")} to="/barter-available">Barter Available</NavLink>
-              </li>
-              <li>
-                <NavLink className={({ isActive }) => (isActive && activeChild === 0 ? "text-[#C3A66D]" : "text-black")} to="/barter-given">Barter Given</NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/barter-history"
-                  className={({ isActive }) => (isActive && activeChild === 0 ?"text-[#C3A66D]" : "text-black")}
-                >
-                  Barter History
-                </NavLink>
-              </li>
-            </div>
-          )} </NavLink>
+            {activeDropdown === 0 && (
+              <div className="ml-5 text-sm mt-2 flex flex-col gap-2 ">
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-[#C3A66D]" : "text-black"
+                    }
+                    to="/barter-available"
+                  >
+                    Barter Available
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive && activeChild === 0
+                        ? "text-[#C3A66D]"
+                        : "text-black"
+                    }
+                    to="/barter-given"
+                  >
+                    Barter Given
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/barter-history"
+                    className={({ isActive }) =>
+                      isActive && activeChild === 0
+                        ? "text-[#C3A66D]"
+                        : "text-black"
+                    }
+                  >
+                    Barter History
+                  </NavLink>
+                </li>
+              </div>
+            )}{" "}
+          </NavLink>
         </div>
+
+          {/* customer Request start*/}
+        
         <div
           className="flex flex-col cursor-pointer"
           onClick={() => handleDropdownClick(1)}
         >
-
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? " bg-primary-gradient  mr-3 rounded"
+                : "bg-white text-black"
+            }
+            to="/customer-request"
+          >
           <div className="flex   gap-3">
             <img src="./src/assets/icon/customer.svg" alt="" />
             <p className="text-sm mt-1 ">Customer Request </p>
           </div>
           {activeDropdown === 1 && (
             <div className="ml-5 text-sm mt-2 flex flex-col gap-2">
-              <li><NavLink
+              <li>
+                <NavLink
                   to="/customer-request"
-                  className={({ isActive }) => (isActive && activeChild === 0 ?"text-[#C3A66D]" : "text-black")}
+                  className={({ isActive }) =>
+                    isActive && activeChild === 1
+                      ? "text-[#C3A66D]"
+                      : "text-black"
+                  }
                 >
                   From App
-                </NavLink></li>
-              <li><NavLink
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/OverThe-Customer"
-                  className={({ isActive }) => (isActive && activeChild === 0 ?"text-[#C3A66D]" : "text-black")}
+                  className={({ isActive }) =>
+                    isActive && activeChild === 1
+                      ? "text-[#C3A66D]"
+                      : "text-black"
+                  }
                 >
                   Over The Customer
-                </NavLink></li>
+                </NavLink>
+              </li>
             </div>
-          )}
+          )}</NavLink>
         </div>
+
+
+        {/* Ornaments start */}
+
         <div
           className="flex flex-col cursor-pointer"
           onClick={() => handleDropdownClick(2)}
         >
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? " bg-primary-gradient  mr-3 rounded"
+                : "bg-white text-black"
+            }
+            to="/deposit-ornaments"
+          >
           <div className="flex gap-3">
             <img src="./src/assets/icon/Ornaments.svg" alt="" />
             <p>Ornaments</p>
           </div>
           {activeDropdown === 2 && (
-            <div>
-              <p>Deposited Ornaments</p>
-              <p>Display Ornaments</p>
-              <p>Sold Ornaments</p>
-              <p>Withdraw Ornaments</p>
-              <p>Ornament Categories </p>
-              <p>Locker Ornaments</p>
-              <p>Barter Ornaments</p>
-              <p>Exchanged Ornaments</p>
-              <p>Surrendered Ornaments</p>
+            <div className="ml-5 text-sm mt-2 flex flex-col gap-2">
+              <NavLink className={({ isActive }) =>
+                    isActive && activeChild === 2
+                      ? "text-[#C3A66D]"
+                      : "text-black"
+                  } to='/deposit-ornaments'><li>Deposited Ornaments</li></NavLink>
+              <li>Display Ornaments</li>
+              <li>Sold Ornaments</li>
+              <li>Withdraw Ornaments</li>
+              <li>Ornament Categories </li>
+              <li>Locker Ornaments</li>
+              <li>Barter Ornaments</li>
+              <li>Exchanged Ornaments</li>
+              <li>Surrendered Ornaments</li>
             </div>
           )}
+          </NavLink>
         </div>
+
+        {/* Order Start */}
+
         <div
           className="flex flex-col cursor-pointer"
           onClick={() => handleDropdownClick(3)}
@@ -131,6 +197,7 @@ export default function LeftSideBar() {
               <p>Buy Orders</p>
             </div>
           )}
+          
         </div>
         <div
           className="flex flex-col cursor-pointer"

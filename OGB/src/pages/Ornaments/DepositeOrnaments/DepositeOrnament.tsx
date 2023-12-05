@@ -1,10 +1,10 @@
 import { Search } from "lucide-react";
 import { Button } from "../../../components/ui/button";
 import DataTable from "../../../components/common/DataTable";
-import { barterGivenColumn } from "./column";
+import { depositeOrnamentColumn } from "./column copy";
 // import { barterAvailableColumn } from "./column";
 
-export default function BarterGiven() {
+export default function DepositOrnaments() {
   return (
     <section className="border-2 rounded-3xl p-2" style={{borderColor: "rgba(195, 166, 109, 1)"}}>
       <div className="flex justify-between p-2">
@@ -37,17 +37,19 @@ export default function BarterGiven() {
         <th className="py-2 px-4">Ornament Name</th>
         <th className="py-2 px-4">Image</th>
         <th className="py-2 px-4">Price (Rs)</th>
+        <th className="py-2 px-4">Customer Name</th>
+        <th className="py-2 px-4">Mobile</th>
         <th className="py-2 px-4">Weight(gm)</th>
         <th className="py-2 px-4">Category</th>
         <th className="py-2 px-4">Carat</th>
-        <th className="py-2 px-4">Customer Name</th>
-        <th className="py-2 px-4">Contact No.</th>
-        <th className="py-2 px-4">Date</th>
+        <th className="py-2 px-4">Height</th>
+        <th className="py-2 px-4">Width</th>
+        <th className="py-2 px-4">Status</th>
       </tr>
     </thead>
     Your table body content goes here
   </table> */}
-  <DataTable columns={barterGivenColumn} data={[]}/>
+  <DataTable columns={depositeOrnamentColumn} data={[]}/>
 </div>
 
     </section>

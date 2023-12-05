@@ -6,3 +6,12 @@ export const API_URL = {
 
 
 }
+
+
+export type RowType = {
+    getIsSelected: () => boolean;
+    toggleSelected: (value: boolean) => void;
+    getValue: (key: string) => any;
+    original: any;
+    index: number;
+  };

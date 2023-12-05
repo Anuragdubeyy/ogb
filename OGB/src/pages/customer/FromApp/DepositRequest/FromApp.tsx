@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { depositRequestColumn } from "./column";
+import DataTable from "../../../../components/common/DataTable";
 
 export default function FromApp() {
   return (
@@ -39,14 +41,14 @@ export default function FromApp() {
           Withdraw Request
           <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
         </h2></Link>
-        <Link to="/orders"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+        <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
           Orders
           <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
         </h2></Link>
       </div>
 
       <div className="border border-input rounded-2xl mt-3 bg-ornament-bg">
-  <table className="w-full table-auto ">
+  {/* <table className="w-full table-auto ">
     <thead>
       <tr className=" text-black" style={{backgroundColor:"#EDE6D8"}}>
         
@@ -60,8 +62,9 @@ export default function FromApp() {
         <th className="py-2 px-4">Action</th>
       </tr>
     </thead>
-    {/* Your table body content goes here */}
-  </table>
+    Your table body content goes here
+  </table> */}
+  <DataTable columns={depositRequestColumn} data={[]}/>
 </div>
 
 

@@ -6,11 +6,17 @@ import BarterHistory from "../pages/barter/BarterHistory/BarterHistory";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import CustomerRequest from "../components/form/CustomerRequest";
 import CustomerOTP from "../components/form/CustomerOTP";
-import FromApp from "../pages/customer/FromApp/FromApp";
-import WithdrawRequest from "../pages/customer/FromApp/WithdrawRequest";
-import Orders from "../pages/customer/FromApp/Orders";
-import OverTheCustomer from "../pages/customer/overTheCustomer/OverTheCustomer";
+import FromApp from "../pages/customer/FromApp/DepositRequest/FromApp";
+import WithdrawRequest from "../pages/customer/FromApp/WithdrawRequest/WithdrawRequest";
+import Orders from "../pages/customer/FromApp/Orders/Orders";
+import OverTheCustomer from "../pages/customer/overTheCustomer/home/OverTheCustomer";
 import Deposit from "../pages/customer/overTheCustomer/Deposit";
+import Withdraw from "../pages/customer/overTheCustomer/Withdraw/Withdraw";
+import BarterCustomer from "../pages/customer/overTheCustomer/Barter/Barter";
+import DisplayCustomer from "../pages/customer/overTheCustomer/Display/Display";
+import ImmediateSellCustomer from "../pages/customer/overTheCustomer/immediate/imeadiate";
+import BarterListCustomer from "../pages/customer/overTheCustomer/BarterList/BarterList";
+import DepositOrnaments from "../pages/Ornaments/DepositeOrnaments/DepositeOrnament";
 
 const AppRoutes = ()=>{
     return (
@@ -32,6 +38,15 @@ const AppRoutes = ()=>{
             <Route path="/order" element={<Orders/>}/>
             <Route path="/OverThe-Customer" element={<OverTheCustomer/>}/>
             <Route path="/deposit" element={<Deposit/>}/>
+            <Route path="/withdraw" element={<Withdraw/>}/>
+            <Route path="/barter-customer" element={<BarterCustomer/>}/>
+            <Route path="/display-customer" element={<DisplayCustomer/>}/>
+            <Route path="/immediate-sell" element={<ImmediateSellCustomer/>}/>
+            <Route path="/barter-list" element={<BarterListCustomer/>}/>
+
+            {/* Ornaments  */}
+            <Route path="/deposit-ornaments" element={<DepositOrnaments/>}/>
+
 
 
 

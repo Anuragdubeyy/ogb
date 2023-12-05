@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { homeColumn } from "./column";
+import DataTable from "../../../../components/common/DataTable";
 
 export default function OverTheCustomer() {
     return (
@@ -39,30 +41,30 @@ export default function OverTheCustomer() {
             Deposit
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+          <Link to="/withdraw"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
             withdraw
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+          <Link to="/barter-customer"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
             Barter
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+          <Link to="/display-customer"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
             Display
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+          <Link to="/immediate-sell"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
             Immediate Sell
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
-          <Link to="/order"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
+          <Link to="/barter-list"><h2 className="text-black hover:text-[#C3A66D] cursor-pointer relative group">
             Barter List
             <span className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-[#C3A66D] transition-all"></span>
           </h2></Link>
         </div>
   
         <div className="border border-input rounded-2xl mt-3 bg-ornament-bg">
-    <table className="w-full table-auto ">
+    {/* <table className="w-full table-auto ">
       <thead>
         <tr className=" text-black" style={{backgroundColor:"#EDE6D8"}}>
         
@@ -77,8 +79,9 @@ export default function OverTheCustomer() {
           <th className="py-2 px-4">Status</th>
         </tr>
       </thead>
-      {/* Your table body content goes here */}
-    </table>
+      Your table body content goes here
+    </table> */}
+    <DataTable columns={homeColumn} data={[]}/>
   </div>
   
   

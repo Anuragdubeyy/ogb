@@ -1,5 +1,7 @@
 import { Search } from "lucide-react";
 import { Button } from "../../../components/ui/button";
+import DataTable from "../../../components/common/DataTable";
+import { barterAvailableColumn } from "./column";
 // import { barterAvailableColumn } from "./column";
 
 export default function BarterAvailable() {
@@ -28,7 +30,7 @@ export default function BarterAvailable() {
       </div>
 
       <div className="border border-input rounded-md mt-3 bg-ornament-bg">
-  <table className="w-full table-auto">
+  {/* <table className="w-full table-auto">
     <thead>
       <tr className=" text-black" style={{backgroundColor:"#EDE6D8"}}>
         <th className="py-2 px-4">Product ID</th>
@@ -45,8 +47,9 @@ export default function BarterAvailable() {
         <th className="py-2 px-4">Status</th>
       </tr>
     </thead>
-    {/* Your table body content goes here */}
-  </table>
+    Your table body content goes here
+  </table> */}
+  <DataTable columns={barterAvailableColumn} data={[]}/>
 </div>
 
     </section>

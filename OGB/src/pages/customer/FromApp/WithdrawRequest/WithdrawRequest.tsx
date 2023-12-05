@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { withdrawRequestColumn } from "./column";
+import DataTable from "../../../../components/common/DataTable";
 
 export default function WithdrawRequest () {
     return (
@@ -46,7 +48,7 @@ export default function WithdrawRequest () {
         </div>
   
         <div className="border border-input rounded-2xl mt-3 bg-ornament-bg">
-    <table className="w-full table-auto ">
+    {/* <table className="w-full table-auto ">
       <thead>
         <tr className=" text-black" style={{backgroundColor:"#EDE6D8"}}>
           
@@ -60,8 +62,9 @@ export default function WithdrawRequest () {
           <th className="py-2 px-4">Action</th>
         </tr>
       </thead>
-      {/* Your table body content goes here */}
-    </table>
+      Your table body content goes here
+    </table> */}
+    <DataTable columns={withdrawRequestColumn} data={[]}/>
   </div>
   
   

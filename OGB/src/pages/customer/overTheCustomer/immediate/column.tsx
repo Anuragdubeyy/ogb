@@ -1,18 +1,14 @@
 
-import { RowType } from '../../../constant';
+import { RowType } from '../../../../constant';
 
-export const barterAvailableColumn = [
-  {
-    accessorKey: 'id',
-    header: 'Product ID',
-  },
+export const immediateColumn = [
   {
     accessorKey: 'name',
     header: 'Ornament Name',
   },
   {
-    accessorKey: 'name',
-    header: 'Image',
+    accessorKey: 'id',
+    header: 'Ornament Image',
     cell: ({ row }: { row: RowType }) => (
       <div className="h-12 w-12 object-cover overflow-hidden mx-auto border rounded-md">
         <img
@@ -23,40 +19,28 @@ export const barterAvailableColumn = [
       </div>
     ),
   },
+  
+  
   {
     accessorKey: 'name',
-    header: 'Price (Rs)',
+    header: 'price',
   },
   {
     accessorKey: 'name',
-    header: 'Customer Name',
+    header: 'Weight',
   },
   {
     accessorKey: 'name',
-    header: 'Mobile',
+    header: 'Width',
   },
-  {
-    accessorKey: 'name',
-    header: 'Weight(gm)',
-  },
-  {
-    accessorKey: 'name',
-    header: 'Category',
-  },
-  {
-    accessorKey: 'name',
-    header: 'Carat',
-  },
+  
   {
     accessorKey: 'name',
     header: 'Height',
   },
   {
     accessorKey: 'name',
-    header: 'Width',
-  },
-  {
-    accessorKey: 'name',
     header: 'Status',
-  }
+  },
+  
   ]

@@ -1,11 +1,8 @@
 
 import { RowType } from '../../../constant';
 
-export const barterAvailableColumn = [
-  {
-    accessorKey: 'id',
-    header: 'Product ID',
-  },
+export const barterHistoryColumn = [
+  
   {
     accessorKey: 'name',
     header: 'Ornament Name',
@@ -23,18 +20,7 @@ export const barterAvailableColumn = [
       </div>
     ),
   },
-  {
-    accessorKey: 'name',
-    header: 'Price (Rs)',
-  },
-  {
-    accessorKey: 'name',
-    header: 'Customer Name',
-  },
-  {
-    accessorKey: 'name',
-    header: 'Mobile',
-  },
+  
   {
     accessorKey: 'name',
     header: 'Weight(gm)',
@@ -45,18 +31,34 @@ export const barterAvailableColumn = [
   },
   {
     accessorKey: 'name',
-    header: 'Carat',
+    header: 'Barter Name',
   },
   {
     accessorKey: 'name',
-    header: 'Height',
+    header: 'Contact no.',
   },
   {
     accessorKey: 'name',
-    header: 'Width',
+    header: 'Email',
+  },
+  
+  
+  {
+    accessorKey: 'name',
+    header: 'Address',
+  },
+
+  {
+    accessorKey: 'name',
+    header: 'Date',
   },
   {
     accessorKey: 'name',
     header: 'Status',
+  },
+  {
+    accessorKey: 'name',
+    header: 'Owner Details',
   }
+
   ]
