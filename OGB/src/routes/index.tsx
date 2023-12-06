@@ -17,6 +17,8 @@ import DisplayCustomer from "../pages/customer/overTheCustomer/Display/Display";
 import ImmediateSellCustomer from "../pages/customer/overTheCustomer/immediate/imeadiate";
 import BarterListCustomer from "../pages/customer/overTheCustomer/BarterList/BarterList";
 import DepositOrnaments from "../pages/Ornaments/DepositeOrnaments/DepositeOrnament";
+import DisplayOrnaments from "../pages/Ornaments/DisplayOrnaments/DisplayOrnaments";
+import SoldOrnaments from "../pages/Ornaments/SoldOrnaments/SoldOrnaments";
 
 const AppRoutes = ()=>{
     return (
@@ -46,17 +48,14 @@ const AppRoutes = ()=>{
 
             {/* Ornaments  */}
             <Route path="/deposit-ornaments" element={<DepositOrnaments/>}/>
+            <Route path="/display-ornaments" element={<DisplayOrnaments/>}/>
+            <Route path="/sold-ornaments" element={<SoldOrnaments/>}/>
 
 
 
 
 
-                {/* <Route path="/dashboard" element={<DashboardPage/>} />
-                <Route path="/masterOtp" element={<MasterOtpPage/>} />
-                <Route path="/agent" element={<AgentPage/>} />
-                <Route path="/cases" element={<CasesPage/>}  />
-                <Route path="/customer" element={<CustomerPage/>} />
-                <Route path="/loan" element={<LoanPage/>} /> */}
+               
             </Route>
         </Routes>
     )

@@ -14,7 +14,7 @@ export default function BarterAvailable() {
         </div>
         <div className="flex items-center gap-16">
           <div className="flex items-center border border-input bg-background rounded ring-offset-background">
-            <Search className="ml-5" />
+            <Search className="ml-5 text-gray-500" />
               <input
               
                 placeholder="Search"

@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 import { Button } from "../../../components/ui/button";
 import DataTable from "../../../components/common/DataTable";
-import { depositeOrnamentColumn } from "./column copy";
+import { depositeOrnamentColumn } from "./columncopy";
 // import { barterAvailableColumn } from "./column";
 
 export default function DepositOrnaments() {
@@ -9,12 +9,12 @@ export default function DepositOrnaments() {
     <section className="border-2 rounded-3xl p-2" style={{borderColor: "rgba(195, 166, 109, 1)"}}>
       <div className="flex justify-between p-2">
         <div>
-          <h2 className="font-bold text-black ">Available Barter Ornaments</h2>
-          <p className=" text-black  text-opacity-70">Total barter ornaments : 9</p>
+          <h2 className="font-bold text-black ">Deposited Ornaments</h2>
+          <p className=" text-black  text-opacity-70">Total Deposited Ornaments : 9</p>
         </div>
         <div className="flex items-center gap-16">
           <div className="flex items-center border border-input bg-background rounded ring-offset-background">
-            <Search className="ml-5" />
+            <Search className="ml-5 text-gray-500" />
               <input
               
                 placeholder="Search"

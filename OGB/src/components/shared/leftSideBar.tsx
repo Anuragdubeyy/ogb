@@ -2,10 +2,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function LeftSideBar() {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [activeChild, setActiveChild] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const [activeChild, setActiveChild] = useState<number | null>(null);
 
-  const handleDropdownClick = (index) => {
+  const handleDropdownClick = (index:number) => {
     // setActiveDropdown((prevIndex) => (prevIndex === index ? null : index));
 
     if (activeDropdown === index) {
@@ -169,8 +169,16 @@ export default function LeftSideBar() {
                       ? "text-[#C3A66D]"
                       : "text-black"
                   } to='/deposit-ornaments'><li>Deposited Ornaments</li></NavLink>
-              <li>Display Ornaments</li>
-              <li>Sold Ornaments</li>
+              <NavLink className={({ isActive }) =>
+                    isActive && activeChild === 2
+                      ? "text-[#C3A66D]"
+                      : "text-black"
+                  } to='/display-ornaments'><li>Display Ornaments</li></NavLink>
+              <NavLink className={({ isActive }) =>
+                    isActive && activeChild === 2
+                      ? "text-[#C3A66D]"
+                      : "text-black"
+                  } to='/sold-ornaments'><li>Sold Ornaments</li></NavLink>
               <li>Withdraw Ornaments</li>
               <li>Ornament Categories </li>
               <li>Locker Ornaments</li>
